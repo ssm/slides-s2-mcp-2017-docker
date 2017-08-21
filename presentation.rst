@@ -10,7 +10,7 @@
 
 .. footer::
 
-    "Docker", Stig Sandbeck Mathisen, Sopra Steria 2017
+    Introduction to Docker, Stig Sandbeck Mathisen, Sopra Steria 2017
 
 
 Docker
