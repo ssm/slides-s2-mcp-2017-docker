@@ -16,7 +16,7 @@
 Docker
 ======
 
-Sopra Steria, Containers and Microservices
+Sopra Steria, Microservices and Container Platform Community
 
 2017-08-22
 
@@ -36,10 +36,50 @@ whoami
 
 ----
 
-Docker
-======
+What is Docker
+==============
 
-test...
+----
+
+A short history of containers
+=============================
+
+* FreeBSD jail
+* Solaris zones
+* Linux-Vserver, OpenVZ...
+* Docker
+* Standardised containers  <---- YOU ARE HERE
+* And then what?
+
+----
+
+Docker images
+=============
+
+----
+
+Docker on the Command Line
+==========================
+
+----
+
+Docker service
+==============
+
+----
+
+Storage
+=======
+
+----
+
+Networking
+==========
+
+----
+
+Demo
+====
 
 ----
 
