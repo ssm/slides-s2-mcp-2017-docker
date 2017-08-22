@@ -323,4 +323,4 @@ Demo
 That's it
 =========
 
-Thank you!
+Takk for meg.
