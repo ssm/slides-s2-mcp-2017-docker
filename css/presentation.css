@@ -5,6 +5,7 @@ body {
 }
 
 p {
+    font-size: 125%;
     margin-bottom: 0.3em;
     margin-top: 0.3em;
 }
@@ -42,7 +43,7 @@ img.figure {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5%;
+    border-radius: 0.3em;
 }
 
 .footer {
@@ -52,13 +53,10 @@ img.figure {
   right: 0px;
 }
 
-#console.footer {
-  display: none;
-}
-
 .highlight.code  {
     background: #dddddd;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
     padding: 1em;
+    border-radius: 0.3em;
 }
