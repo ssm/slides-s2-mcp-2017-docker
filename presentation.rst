@@ -1,6 +1,7 @@
-:data-transition-duration: 200
+:data-transition-duration: 300
 :css: css/presentation.css
-:data-rotate-x: 20
+:data-rotate-x: 360
+:skip-help: true
 
 .. title:: Introduction to Docker
 
