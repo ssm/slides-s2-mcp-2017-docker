@@ -16,7 +16,9 @@
 Docker
 ======
 
-Sopra Steria, Microservices and Container Platform Community
+Sopra Steria
+
+Microservices and Container Platform Community
 
 2017-08-22
 
@@ -127,7 +129,7 @@ Download and test Debian unstable.
 
 .. code-block:: shell-session
 
-  # docker run -it debian:unstable
+  user@laptop $ docker run -it debian:unstable
   Unable to find image 'debian:unstable' locally
   unstable: Pulling from library/debian
   19b593653f02: Pull complete
@@ -144,8 +146,8 @@ Download and test splunk.
 
 .. code-block:: shell-session
 
-   # docker run --name splunk --hostname splunk -p "8000:8000" \
-     -d -e "SPLUNK_START_ARGS=--accept-license" \
+   user@laptop $ docker run --name splunk --hostname splunk \
+     -p "8000:8000" -d -e "SPLUNK_START_ARGS=--accept-license" \
      splunk/splunk:6.6.1
 
 ----
@@ -155,11 +157,19 @@ Building images
 
 .. code-block:: shell-session
 
-  # docker build .
+  user@laptop $ ls -l
+  total 8
+  -rw-r--r--  1 user  user  256 Aug 22 15:46 Dockerfile
 
-  # docker build -t myapp:test .
+  user@laptop $ docker build .
+
+  user@laptop $ docker build -t myapp:test .
 
   # docker tag registry.example.com/myapp:v1 myapp:test
+
+.. note::
+
+  Dockerfile, we'll get to that soon.
 
 ----
 
@@ -185,7 +195,9 @@ Running images
 
 .. note::
 
-  If CMD is set, override it.
+  The command to run can be set for a docker image.  Override it explicitly.
+
+  See what it is with "docker inspect"
 
 ----
 
@@ -241,7 +253,7 @@ An docker container
 
 .. code-block:: shell-session
 
-  # docker run -it myapp
+  user@host $ docker run -it myapp
 
 .. image:: images/docker-4.png
    :class: figure
