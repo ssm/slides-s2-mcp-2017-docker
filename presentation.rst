@@ -62,8 +62,7 @@ Start with a base OS
 --------------------
 
 .. image:: images/docker-1.png
-   :height: 10em
-   :width: 10em
+   :class: figure
 
 ----
 
@@ -71,28 +70,24 @@ Include a runtime environment
 -----------------------------
 
 .. image:: images/docker-2.png
-   :height: 10em
-   :width: 10em
+   :class: figure
 
 ----
+
+Add your application
+--------------------
 
 .. image:: images/docker-3.png
-   :height: 10em
-   :width: 10em
+   :class: figure
 
 ----
 
-Docker instance
-===============
 
-----
-
-Docker image in a runtime environment
--------------------------------------
+An instance of a docker image
+-----------------------------
 
 .. image:: images/docker-4.png
-   :height: 10em
-   :width: 10em
+   :class: figure
 
 ----
 
