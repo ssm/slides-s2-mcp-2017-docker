@@ -2,7 +2,7 @@
 :css: css/presentation.css
 :data-rotate-x: 20
 
-.. title:: Docker
+.. title:: Introduction to Docker
 
 .. header::
 
@@ -10,8 +10,7 @@
 
 .. footer::
 
-    Introduction to Docker, Stig Sandbeck Mathisen, Sopra Steria 2017
-
+    Introduction to Docker
 
 Docker
 ======
@@ -31,6 +30,7 @@ whoami
    ssm:x:1000:1000:Stig Sandbeck Mathisen:/home/ssm:/bin/zsh
 
 * Lead Infrastructure Engineer
+* Team Leader @ TOD
 * Debian Developer
 * Red Hat Certified Architect
 
@@ -137,21 +137,39 @@ Building Docker images
 Start with a base OS
 --------------------
 
+.. code-block:: docker
+
+   FROM centos:7
+
 .. image:: images/docker-1.png
    :class: figure
+
 
 ----
 
 Include a runtime environment
 -----------------------------
 
+.. code-block:: docker
+
+   FROM centos:7
+   RUN yum -y install jre...
+
 .. image:: images/docker-2.png
    :class: figure
+
 
 ----
 
 Add your application
 --------------------
+
+.. code-block:: docker
+
+   FROM centos:7
+   RUN yum -y install jre...
+   ADD https://artifactory.example.com/app.jar /srv/app.jar
+   CMD java -jar /srv/app.jar
 
 .. image:: images/docker-3.png
    :class: figure
@@ -161,16 +179,14 @@ Add your application
 An docker container
 -------------------
 
+.. code-block:: shell-session
+
+  # docker run -it myapp
+
 .. image:: images/docker-4.png
    :class: figure
 
-----
 
-Docker service
-==============
-
-* Daemon
-*
 ----
 
 Storage
