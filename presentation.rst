@@ -25,9 +25,9 @@ Sopra Steria, Microservices and Container Platform Community
 whoami
 ======
 
-::
+.. code-block:: shell-session
 
-   # getent passwd ssm
+   $ getent passwd ssm
    ssm:x:1000:1000:Stig Sandbeck Mathisen:/home/ssm:/bin/zsh
 
 * Lead Infrastructure Engineer
@@ -48,14 +48,35 @@ Docker is a way to...
 
 ----
 
+Where can I use it?
+===================
+
+* Linux
+* Windows
+* MacOS
+
+.. note::
+
+   Windows and MacOS runs a Linux VM.
+
+   Windows can run Windows containers.
+
+----
+
 How does it work?
 =================
 
-* Static disk image with application and all dependencies
+* Disk image with application and dependencies
 * External configuration and data storage
 * Separate networking
 * Separate storage
 * Separate users and groups
+
+.. note::
+
+  Disk image is immutable
+
+  Look at namespacing and cgroups in Linux.
 
 ----
 
@@ -89,13 +110,43 @@ The "docker" command.
 How do I use this thing?
 ------------------------
 
-Instant linux instance:
+"docker run" will download a docker image and start a container.
 
 .. code-block:: shell-session
 
    # docker run -it centos:7
 
    # docker run -it debian:unstable
+
+----
+
+Instant OS instance
+-------------------
+
+Download and test Debian unstable.
+
+.. code-block:: shell-session
+
+  # docker run -it debian:unstable
+  Unable to find image 'debian:unstable' locally
+  unstable: Pulling from library/debian
+  19b593653f02: Pull complete
+  Digest: sha256:6b8a5bdcc30b79c3740efa654153d834c09[...]
+  Status: Downloaded newer image for debian:unstable
+  root@adc34b017b94:/#
+
+----
+
+Instant application test
+------------------------
+
+Download and test splunk.
+
+.. code-block:: shell-session
+
+   # docker run --name splunk --hostname splunk -p "8000:8000" \
+     -d -e "SPLUNK_START_ARGS=--accept-license" \
+     splunk/splunk:6.6.1
 
 ----
 
@@ -127,6 +178,14 @@ Pulling and pushing images
 
 Running images
 --------------
+
+.. code-block:: shell-session
+
+   # docker run -it registry.example.com/myapp:latest /bin/bash
+
+.. note::
+
+  If CMD is set, override it.
 
 ----
 
