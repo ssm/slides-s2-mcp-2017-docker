@@ -52,6 +52,10 @@ img.figure {
   right: 0px;
 }
 
+#console.footer {
+  display: none;
+}
+
 .highlight.code  {
     background: #dddddd;
     margin-top: 0.3em;
