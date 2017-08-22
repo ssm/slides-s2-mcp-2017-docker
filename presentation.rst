@@ -39,22 +39,98 @@ whoami
 What is Docker
 ==============
 
+Docker is a way to...
+
+* Package software
+* Publish software
+* Isolate software
+
+----
+
+How does it work?
+=================
+
+* Static disk image with application and all dependencies
+* External configuration and data storage
+* Separate networking
+* Separate storage
+* Separate users and groups
+
+----
+
+What problems does it solve?
+============================
+
+* Reproducability
+* Transparency
+* "It works on my laptop"
+
 ----
 
 A short history of containers
 =============================
 
-* FreeBSD jail
-* Solaris zones
-* Linux-Vserver, OpenVZ...
-* Docker
+* 1999: FreeBSD jail
+* 2001: Linux-Vserver (...)
+* 2004: Solaris zones
+* 2013: Docker
 * Standardised containers  <---- YOU ARE HERE
-* And then what?
 
 ----
 
-Docker images
-=============
+Docker on the Command Line
+==========================
+
+The "docker" command.
+
+----
+
+How do I use this thing?
+------------------------
+
+Instant linux instance:
+
+.. code-block:: shell-session
+
+   # docker run -it centos:7
+
+   # docker run -it debian:unstable
+
+----
+
+Building images
+---------------
+
+.. code-block:: shell-session
+
+  # docker build .
+
+  # docker build -t myapp:test .
+
+  # docker tag registry.example.com/myapp:v1 myapp:test
+
+----
+
+Pulling and pushing images
+--------------------------
+
+.. code-block:: shell-session
+
+   # docker pull debian:9
+
+   # docker pull registry.example.com/base:latest
+
+   # docker push registry.example.com/myapp:latest
+
+----
+
+Running images
+--------------
+
+----
+
+Building Docker images
+======================
 
 ----
 
@@ -82,32 +158,68 @@ Add your application
 
 ----
 
-
-An instance of a docker image
------------------------------
+An docker container
+-------------------
 
 .. image:: images/docker-4.png
    :class: figure
 
 ----
 
-Docker on the Command Line
-==========================
-
-----
-
 Docker service
 ==============
 
+* Daemon
+*
 ----
 
 Storage
 =======
 
+All docker containers have a writable layer.
+
+Data written to container.
+
+* Same lifetime as the container
+* Managed by the storage driver
+* Storage driver has performance overhead
+
+Use a data mount.
+
+----
+
+Volumes
+-------
+
+* Persistent storage
+* Managed by docker (/var/lib/docker/...)
+
+----
+
+Bind mounts
+-----------
+
+* Persistent storage
+* Mounted from anywhere on the host filesystem
+
+----
+
+tmpfs mounts
+------------
+
+* For performance
+* Mounted from host tmpfs
+* Stored in memory (or swap)
+* Same lifetime as container
+
 ----
 
 Networking
 ==========
+
+Most developer setups share network with the host.
+
+Can be as complex as you want, and even more.
 
 ----
 
