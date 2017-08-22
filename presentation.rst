@@ -58,22 +58,22 @@ Docker images
 
 ----
 
-.. image:: images/Talk - 1.png
+.. image:: images/docker-1.png
 
 ----
 
-.. image:: images/Talk - 2.png
+.. image:: images/docker-2.png
 
 ----
 
-.. image:: images/Talk - 3.png
+.. image:: images/docker-3.png
 
 ----
 
 Docker instance
 ===============
 
-.. image:: images/Talk - 3.png
+.. image:: images/docker-4.png
 
 ----
 
