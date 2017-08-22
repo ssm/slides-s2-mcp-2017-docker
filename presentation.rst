@@ -58,6 +58,25 @@ Docker images
 
 ----
 
+.. image:: images/Talk - 1.png
+
+----
+
+.. image:: images/Talk - 2.png
+
+----
+
+.. image:: images/Talk - 3.png
+
+----
+
+Docker instance
+===============
+
+.. image:: images/Talk - 3.png
+
+----
+
 Docker on the Command Line
 ==========================
 
