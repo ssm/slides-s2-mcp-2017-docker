@@ -58,22 +58,41 @@ Docker images
 
 ----
 
+Start with a base OS
+--------------------
+
 .. image:: images/docker-1.png
+   :height: 50%
+   :width: 50%
 
 ----
 
+Include a runtime environment
+-----------------------------
+
 .. image:: images/docker-2.png
+   :height: 50%
+   :width: 50%
 
 ----
 
 .. image:: images/docker-3.png
+   :height: 50%
+   :width: 50%
 
 ----
 
 Docker instance
 ===============
 
+----
+
+Docker image in a runtime environment
+-------------------------------------
+
 .. image:: images/docker-4.png
+   :height: 50%
+   :width: 50%
 
 ----
 
