@@ -288,6 +288,10 @@ tmpfs mounts
 * Stored in memory (or swap)
 * Same lifetime as container
 
+.. note::
+
+  Just for speed. Data is lost with container.  Avoids the overhead of the storage driver.
+
 ----
 
 Networking
