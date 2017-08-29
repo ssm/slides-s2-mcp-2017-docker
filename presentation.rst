@@ -16,11 +16,11 @@
 Docker
 ======
 
-Sopra Steria
+Tolldirektoratet
 
-Microservices and Container Platform Community
+DevOps-gruppe
 
-2017-08-22
+2017-08-29
 
 ----
 
